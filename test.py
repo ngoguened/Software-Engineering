@@ -2,17 +2,45 @@ import gene_search
 import unittest
 
 class TestSearchControl(unittest.TestCase):
-    def test_import(self):
-        result = gene_search.search_control(None, None, None, None)
-        self.assertEqual(result[0], None, f'')
+    def test_runs(self):
+        assert True
 
-class TestFileBoilerplate(unittest.TestCase):
-    def test_read_input(self):
-        #TODO: test input.
-        self.assertEqual(0,0,f'')
-    def test_write_output(self):
-        #TODO: test output.
-        self.assertEqual(0,0,f'')
+    def test_expected_input(self):
+        assert True
+    
+    def test_unexpected_input_gene(self):
+        assert True
+
+    def test_unexpected_input_species(self):
+        assert True
+
+    def test_unexpected_input_database(self):
+        assert True
+
+    def test_unexpected_input_algorithm(self):
+        assert True
+    
+
+class TestReadInput(unittest.TestCase):
+    def test_runs(self):
+        assert True
+
+    def test_expected_input(self):
+        assert True
+    
+    def test_unexpected_input(self):
+        assert True
+
+
+class TestWriteInput(unittest.TestCase):
+    def test_runs(self):
+        assert True
+    
+    def test_expected_input(self):
+        assert True
+    
+    def test_unexpected_input(self):
+        assert True
 
 if __name__ == '__main__':
     unittest.main()
