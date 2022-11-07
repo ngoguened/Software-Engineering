@@ -3,7 +3,6 @@
 Input:
 * Input will be assumed to exist in the file search-input.txt.
 * Input must be formatted as such:
-    * "Date created: [date] \n
     * Gene of interest: [genefile] \n
     * Species: [species] \n
     * Database: [database] \n

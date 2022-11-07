@@ -1,0 +1,4 @@
+Gene of interest: [genefile]
+Species: [species]
+Database: [database]
+Algorithm: [algorithm]

@@ -15,12 +15,14 @@ def search_control(filename):
 # File Boilerplate
 
 def read_input(filename):
-    #TODO: Implement file read
-    gene = None
-    species = None
-    database = None
-    algorithm = None
-    return [gene, species, database, algorithm]
+    # Since the file is standardized to be in the order gene, species, database, algorithm, output will be in this order
+    # and manipulated immediately in search_control which assumes this order of inputs.
+    input = []
+    file = open(filename, "r")
+    for line in file:
+        input.append(line[line.find(": ")+2:]) #+2 excludes the identifier chars.
+    file.close()
+    return input
 
 def write_output(gene, species, database, algorithm, score, evalue):
     #TODO: Implement file write
