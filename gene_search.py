@@ -1,4 +1,5 @@
 from Bio import Blast
+import datetime
 EMAIL = "s2013017@ed.ac.uk"
 
 #_________________________________________________________
@@ -24,9 +25,17 @@ def read_input(filename):
     file.close()
     return input
 
-def write_output(gene, species, database, algorithm, score, evalue):
-    #TODO: Implement file write
-    return
+def write_output(filename, gene, species, database, algorithm, score, evalue):
+    file = open(filename, "w")
+
+    date = datetime.datetime.now()
+
+    file.write("Date created: " + str(date) + "\nGene of interest: " + gene + "\nSpecies specified: " + species + 
+    "\nDatabase searched: " + database + "\nAlgorithm used: " + algorithm + "\nMax bit score: " + str(score) +
+    "\nE-value: " + str(evalue))
+
+    file.close()
+
 
 if __name__ == '__main__':
     search_control("search-input.txt")

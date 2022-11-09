@@ -23,6 +23,7 @@ class TestSearchControl(unittest.TestCase):
     
 
 class TestReadInput(unittest.TestCase):
+    # Since I am assuming that the proper file input will be respected, it is impossible for the input values to not be strings.
     def test_runs(self):
         f = open("test-search-input.txt", "w")
         f.write("Gene of interest: [genefile]\nSpecies: [species]\nDatabase: [database]\nAlgorithm: [algorithm]\n")
@@ -35,22 +36,14 @@ class TestReadInput(unittest.TestCase):
         self.assertEqual(species, "[species]\n", f"given species does not match expected output")
         self.assertEqual(database, "[database]\n", f"given database does not match expected output")
         self.assertEqual(algorithm, "[algorithm]\n", f"given algorithm does not match expected output")
-        
-
-    def test_expected_input(self):
-        assert True
-    
-    def test_unexpected_input(self):
-        assert True
 
 
 class TestWriteInput(unittest.TestCase):
     def test_runs(self):
-        assert True
-    
-    def test_expected_input(self):
-        assert True
-    
+        gene_search.write_output("test-search-output.txt", "[gene]", "[species]", "[database]", "[algorithm]", "[score]", "[evalue]")
+        os.remove("test-search-output.txt")
+    assert True
+
     def test_unexpected_input(self):
         assert True
 
